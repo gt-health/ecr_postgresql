@@ -1,4 +1,5 @@
-# PostgreSQL database for ECR at the State Department (or Public Health Entity). This container has a schema called "ecr" with ECR case report table.
+# PostgreSQL database for ECR at the State Department (or Public Health Entity). 
+This container has a schema called "ecr" with ECR case report table.
 
 To install:
 First, build the docker file.
