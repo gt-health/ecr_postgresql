@@ -1,18 +1,14 @@
-# PostgreSQL database for GT-FHIR. This container has a schema called "omop_v5", which contains a few
-sample patient data. To support GT-FHIR, f_* table/view exist. To support context holder, some smart_* tables exists.
-omop_v5 schema has OHDSI's OMOP v5 schema. 
+# PostgreSQL database for ECR at the State Department (or Public Health Entity). This container has a schema called "ecr" with ECR case report table.
 
-Before run docker, preapre the sample data in OMOPv5. Do follows,
+To install:
+First, build the docker file.
 
-`$ cd sample_data`
+`$ sudo docker build --build-arg POSTGRES_PASSWORD=<your_choice_of_password> -t ecr-postgres .`
 
-`$ cat datadump* > ../omop_v5_dump.tgz`
+Your password will also be for the "ecr_user" that will be created. "ecr" database will be created with the "ecr_user" has all privileges on. 
 
-This will combind the splitted data into the gzipped tar ball file. 
+The ECR case report table (case_report) resides within ecr schema in the ecr database. 
 
+To run this image:
 
-`$ sudo docker build -t smart-postgres .`
-
-Run this image
-
-`$ sudo docker run --name smart-postgres --net smart-net --ip 172.27.0.6 -p 5433:5432 --hostname smart-postgres -d smart-postgres:latest`
+`$ sudo docker run --name ecr-postgres -p 5432:5432 -d ecr-postgres:latest`
