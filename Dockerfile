@@ -5,7 +5,7 @@ FROM postgres:alpine
 #ENV POSTGRES_PASSWORD <your_password>
 
 # Copy database backup to the /opt/data/ folder
-COPY ecrdb.bk /opt/data/ecrdb.bk
+# COPY ecrdb.bk /opt/data/ecrdb.bk
 ADD *.sql /opt/data/
 RUN chmod -R -v a+rwx /opt/data
 
