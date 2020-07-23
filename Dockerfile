@@ -2,7 +2,7 @@
 FROM postgres:alpine
 
 # Define environment variable
-#ENV POSTGRES_PASSWORD <your_password>
+ENV POSTGRES_PASSWORD postgres
 
 # Copy database backup to the /opt/data/ folder
 #COPY ecrdb.bk /opt/data/ecrdb.bk
