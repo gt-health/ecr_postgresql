@@ -5,4 +5,4 @@ CREATE USER ecr_user WITH
     NOCREATEDB
     NOCREATEROLE
     NOREPLICATION
-    PASSWORD 'i3lworks';
+    PASSWORD 'changeme';
