@@ -1,5 +1,5 @@
 # Use the Postgres image as a base
-FROM postgres:14.6
+FROM postgres:15
 
 # Define environment variable
 ENV POSTGRES_PASSWORD "changeme"
